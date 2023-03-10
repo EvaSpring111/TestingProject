@@ -1,0 +1,22 @@
+/* 
+.container {
+    margin-top: 12%;
+    width: 75%;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#R_M_img {
+    width: 70%;
+    height: 80%;
+}
+*/
+input {
+    width: 100%;
+
+}

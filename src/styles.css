@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    max-width: 1920px;
+    height: 100vh;
+    max-height: 3900px;
+    overflow-x: hidden;
+
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
