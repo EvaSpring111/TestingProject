@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 
 import  {MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+
+import { GetCharactersService } from 'src/get-characters.service';
 
 
 
@@ -17,9 +20,10 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserModule,
     AppRoutingModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [ GetCharactersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
