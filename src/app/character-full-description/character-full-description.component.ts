@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CharacterFullDescription } from '../interface/character-full-description';
+import { CharacterFullDescription } from '../interface/character-full-description.model';
 
 @Component({
   selector: 'app-character-full-description',

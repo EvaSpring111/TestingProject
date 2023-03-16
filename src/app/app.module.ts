@@ -11,6 +11,8 @@ import {MatCardModule} from '@angular/material/card';
 import { GetCharactersService } from 'src/app/services/get-characters.service';
 import { CharacterFullDescriptionComponent } from './character-full-description/character-full-description.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { CharacterFullDescriptionComponent } from './character-full-description/
     AppRoutingModule,
     MatGridListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [ GetCharactersService],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 export interface ListOfCharacters {
-    picure: string,
+    image: string,
     name: string,
     species: NamedCurve,
 }

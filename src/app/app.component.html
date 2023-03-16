@@ -8,11 +8,13 @@
             <input id="filter" class="w-80"  placeholder="Filter by name">
         </div>
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center" *ngFor="let character of characters">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  One of three columns
+                    <img class="img-responsive" [src]="character.image" [alt]="character.name">
+                 <p> {{character.name}}
+                  {{character.species}}</p>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   One of three columns
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
@@ -20,7 +22,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     One of three columns
-                </div>
+                </div> -->
               </div>
         </div>
     </div>
