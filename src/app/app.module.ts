@@ -8,13 +8,15 @@ import  {MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 
-import { GetCharactersService } from 'src/get-characters.service';
+import { GetCharactersService } from 'src/app/services/get-characters.service';
+import { CharacterFullDescriptionComponent } from './character-full-description/character-full-description.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CharacterFullDescriptionComponent
   ],
   imports: [
     BrowserModule,
