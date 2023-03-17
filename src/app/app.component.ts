@@ -27,4 +27,8 @@ export class AppComponent implements OnInit{
         });
 
   }
+
+  sortCharactersByName(characters: ListOfCharacters[]): ListOfCharacters[] {
+    return characters.sort((a, b) => a.name.localeCompare(b.name));
+  }
 }

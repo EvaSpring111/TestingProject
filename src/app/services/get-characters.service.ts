@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environment/environment.prod';
 import { HttpClient } from '@angular/common/http';
-import {  Observable } from 'rxjs';
-// ss
+import {  Observable  } from 'rxjs';
+import { forkJoin } from 'rxjs';
+
 import { ListOfCharacters } from '../interface/list-of-characters.model';
 
 @Injectable({
@@ -14,8 +15,8 @@ export class GetCharactersService {
   constructor(private http: HttpClient) { 
   }
 
-  getCharactersList(): Observable<any>{
-    return this.http.get<any>(this.apiUrl);
-  
+  getCharactersList(): Observable<ListOfCharacters[]>{
+    return this.http.get<ListOfCharacters[]>(this.apiUrl)
   }
 }
+

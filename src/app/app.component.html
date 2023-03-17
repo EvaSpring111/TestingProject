@@ -1,21 +1,45 @@
-<div class="container-fluid d-flex text-center">
+<div class="container-fluid d-flex justify-content-center text-center">
     <div id="container" class="container d-flex flex-column justify-content-center">
         <div class="img-container my-3 mt-5">
             <img class="img-responsive" src="/assets/img/RickAndMorty.jpg" alt="RickAngMorty.jpg">
         </div>
-        <div class="d-flex flex-row container-fluid border border-2">
+        <div class="d-flex flex-row align-items-center container-fluid border border-2 rounded">
             <mat-icon>search</mat-icon>
-            <input id="filter" class="w-80 border-0" placeholder="Filter by name">
+            <input id="filter" class="w-80 py-2 border-0" placeholder="Filter by name">
         </div>
-        <div class="container mt-3">
-            <div class="row w-100 container-fluid" >
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 border border-1"  id='card' *ngFor="let character of characters">
-                    <img class="img-thumbnail border-0" [src]="character.image" [alt]="character.name">
-                    <div class="card-body text-center">
-                        <span >{{character.name}}</span> <br>
-                        <span> {{character.species}}</span>
+        <div class="container-fluid characters mt-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="col card" id='card'
+                    *ngFor="let character of sortCharactersByName(characters)">
+                    <img class="img-fluid" [src]="character.image" [alt]="character.name">
+                    <div class="card-body text-end">
+                        <span class="card-title fw-bold">{{character.name.slice(0, 20)}}</span><br>
+                        <span class="card-text">{{character.species}}</span>
+                        <!-- <span class="card-text">{{character.id}}</span> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<!-- <div class="container-fluid d-flex justify-content-center text-center">
+    <div id="container" class="container d-flex flex-column justify-content-center">
+        <div class="img-container mt-5">
+            <img id="R_M_img" class="img-fluid" src="/assets/img/RickAndMorty.jpg" alt="RickAndMorty.jpg">
+        </div>
+        <div class="d-flex flex-row container-fluid border border-2">
+            <mat-icon>search</mat-icon>
+            <input id="filter" class="w-80 border-0" placeholder="Filter by name" type="text">
+        </div>
+        <div class="container mt-3">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12 card m-1" id='card' *ngFor="let character of characters">
+                    <img class="img-fluid" [src]="character.image" [alt]="character.name">
+                    <div class="card-body text-center">
+                        <span class="card-title">{{character.name.slice(0, 20)}}</span>
+                        <span class="card-text">{{character.species}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
