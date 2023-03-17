@@ -8,9 +8,11 @@
             <input id="filter" class="w-80 py-2 border-0" placeholder="Filter by name">
         </div>
         <div class="container-fluid characters mt-5">
+            <input type="number" max="41" [(ngModel)]="page" placeholder="Enter page number">
+            <button (click)="choosePage()">Go to page</button>            
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
                 <div class="col card" id='card'
-                    *ngFor="let character of sortCharactersByName(characters)">
+                    *ngFor="let character of characters">
                     <img class="img-fluid" [src]="character.image" [alt]="character.name">
                     <div class="card-body text-end">
                         <span class="card-title fw-bold">{{character.name.slice(0, 20)}}</span><br>

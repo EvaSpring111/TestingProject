@@ -15,8 +15,20 @@ export class GetCharactersService {
   constructor(private http: HttpClient) { 
   }
 
-  getCharactersList(): Observable<ListOfCharacters[]>{
-    return this.http.get<ListOfCharacters[]>(this.apiUrl)
+  getCharactersList(): Observable<any[]>{
+    let result: any[] = [];
+    for(let i = 1; i <= 42; i++){
+       result.push(this.http.get<any[]>(`${this.apiUrl}${i}`))
+    }
+    return forkJoin(result);
+    
   }
 }
+
+// let result = [];
+// for(let i = 1; i <= 42; i++){
+//   result.push(this.http.get<ListOfCharacters[]>(`${this.apiUrl}/character?page=${i}`));
+// }
+// return forkJoin(result);
+// }
 
