@@ -9,7 +9,7 @@ import { ListOfCharacters } from '../interface/list-of-characters.model';
   providedIn: 'root'
 })
 export class GetCharactersService {
-  apiUrl: string = 'https://rickandmortyapi.com/api/character?pages';
+  apiUrl: string = `${environment.apiUrl}`;
 
   constructor(private http: HttpClient) { 
   }
