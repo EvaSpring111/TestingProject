@@ -1,5 +1,5 @@
 export interface CharacterFullDescription {
-    picture: string,
+    images: string,
     name: string,
     gender: string,
     status: string,

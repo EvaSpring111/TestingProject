@@ -1,1 +1,15 @@
-<p>character-full-description works!</p>
+<div class="container-fluid" id="list_Of_characters">
+    <!-- <button class="btn btn-outline-primary d-block my-5" (click)="goBack()">Go back</button> -->
+    <div *ngIf="character">
+        <img [src]=character.image class="rounded mx-auto d-block" alt="character">
+        <h2>Informations</h2>
+        <mat-list role="list">
+            <mat-list-item role="listitem">{{character.gender}}     </mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            
+          </mat-list>
+    </div>
+ </div>   
